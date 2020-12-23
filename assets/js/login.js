@@ -11,6 +11,26 @@ $(function () {
         $('.reg-box').hide()
 
     })
+    form.verify({
+    pwd:[
+        /^[\S]{6,12}$/,
+        '密码必须6-12字符'
+    ],
+    repwd:function(value,item){
+        //value 是表单元素的值
+        //item 是表单元素的dom对象
+
+        //return '校验失败的提示信息'
+        //校验确认密码和密码的值是否一致
+        //获取密码框的值
+        var password  =$('#form_reg [name=password]').val()
+        if(value !== password){
+            return '两次密码不一致'
+        }
+    }
+
+})
+ var layer = layui.layer 
     // 注册功能
     $('#form_reg').on('submit', function(e){
         e.preventDefault();
