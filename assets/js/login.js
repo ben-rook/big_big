@@ -28,7 +28,6 @@ $(function () {
             return '两次密码不一致'
         }
     }
-
 })
  var layer = layui.layer 
     // 注册功能
