@@ -5,5 +5,9 @@
         "activityBar.background": "#18340D",
         "titleBar.activeBackground": "#214912",
         "titleBar.activeForeground": "#F5FCF3"
-    }
+    },
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+    
 }
