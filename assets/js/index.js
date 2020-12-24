@@ -1,7 +1,21 @@
 $(function () {
     //获取用户信息
     getUserInfo()
-    function getUserInfo() {
+ 
+    // 退出登录
+       $('#logout').on('click',function(){
+        layui.layer.confirm('确认退出账号？', {icon: 3, title:'提示'}, function(index){
+            // 退出代码，清空token
+            localStorage.removeItem('token');
+            // 跳转到登录页
+            location.href ="/login.html"
+            
+            layer.close(index);
+          })
+    })
+})
+
+   function getUserInfo() {
         // console.log(localStorage.getItem('token'));
         $.ajax({
             type: 'get',
@@ -31,19 +45,7 @@ $(function () {
             $('.text-avatar').html(first)
         }
     }
-    // 退出登录
-       $('#logout').on('click',function(){
-        layui.layer.confirm('确认退出账号？', {icon: 3, title:'提示'}, function(index){
-            // 退出代码，清空token
-            localStorage.removeItem('token');
-            // 跳转到登录页
-            location.href ="/login.html"
-            
-            layer.close(index);
-          })
-    })
 
 
 
 
-})
