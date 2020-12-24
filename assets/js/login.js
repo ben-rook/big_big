@@ -1,4 +1,5 @@
 $(function () {
+    var form =layui.form
     // 登录表单和注册表单
     $('#link_reg').click(function () {
         //1.点击去注册 登录页面隐藏，注册表单显示
